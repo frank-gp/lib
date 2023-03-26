@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <base href="https://frankgp.com/" />
+    <script src="script-head.js"></script>
+    <script src="script-defer.js" defer></script>
+    <!-- <script src="https://frank-gp.github.io/lib/social/youtube.js" data-youtube="https://youtu.be/1eIEGxlaOiE" defer></script> -->
+  </head>
+  <body>
+    <script src="https://frankgp.com/lib/fgp/fgp_loader.js"></script>
+    <!-- <script src="https://fgp.one/clipboard.js" defer></script> -->
+    <!-- <script src="https://fgp.one/github.js" data-github="https://github.com/fgp555" defer></script> -->
+    <!-- <script src="/github.js" data-github="https://github.com/fgp555" defer></script> -->
+    <main>
+      <section class="meta">
+        <h1 class="title">Librerias</h1>
+        <p class="description">Diseño y desarrollo de paginas web.</p>
+      </section>
+      <section class="url">
+        <style>
+          .urls {
+            margin: auto;
+            display: inline-flex;
+            flex-direction: column;
+          }
+          a {
+            /* display: flex; */
+            margin: 0.5em;
+            color: cornflowerblue;
+            text-align: left;
+          }
+        </style>
+        <div class="urls"></div>
+        <script>
+          let url = {
+            1: "css/essential.css",
+            2: "js/clipboard.js",
+            3: "js/img-generator.js",
+            4: "js/ligthbox.js",
+            5: "js/loader.js",
+            6: "js/shortener.js",
+            7: "social/github.js",
+            8: "social/instagram.js",
+            9: "social/whatsapp.js",
+            10: "social/youtube.js",
+            11: "social/youtube-embed.js",
+            12: "web/illustrator.js",
+            13: "code/iframe",
+            14: "code/redirect",
+            15: "social/social.js",
+            16: "web/contact.js",
+            17: "js/mouse.js",
+          };
+
+          let ObjectKeys = Object.keys(url);
+          for (let i = 0; i < ObjectKeys.length; i++) {
+            let urlKey = ObjectKeys[i];
+            console.log(url[urlKey]);
+            let a = document.createElement("a");
+            a.innerText = url[urlKey];
+            a.href = "https://frank-gp.github.io/lib/" + url[urlKey];
+            a.target = "_blank";
+            // document.body.appendChild(a);
+            document.querySelector(".urls").appendChild(a);
+          }
+        </script>
+      </section>
+    </main>
+
+    <!-- mouse animation component... -->
+    <script src="https://frank-gp.github.io/lib/js/mouse.js" defer></script>
+    <!-- mouse animation component. -->
+  </body>
+</html>
