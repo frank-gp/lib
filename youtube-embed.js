@@ -13,9 +13,9 @@
 
 const youtube = document.querySelectorAll(".youtube");
 
-youtube.forEach(myFunction);
+youtube.forEach(youtube_embed);
 
-function myFunction(item, index) {
+function youtube_embed(item, index) {
   let youtubeID = item.dataset.url.split("https://youtu.be/")[1];
   // console.log(youtubeID);
   // console.log(index);

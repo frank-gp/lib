@@ -1,7 +1,8 @@
-
 /*
 
-https://frank-gp.github.io/lib/social/github.js
+<!-- github.js... -->
+<script src="https://frank-gp.github.io/lib/social/github.js" data-github="https://github.com/fgp555" defer></script>
+<!-- github.js... -->
 
 */
 
@@ -11,6 +12,7 @@ console.log(_githubUrl);
 // Create element:
 const fgp_ig = document.createElement("fgp_ig");
 fgp_ig.innerHTML = /* html */ `
+<!--  -->
 <style>
 fgp_ig svg {
     width: 3em;
