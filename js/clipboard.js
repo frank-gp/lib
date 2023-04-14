@@ -27,22 +27,25 @@ _pre.forEach((item) => {
 // ========== clipboard. ==========
 
 const styleSheet = document.createElement("style");
-styleSheet.innerHTML = /* css */ `.clipboard,
+styleSheet.innerHTML = /* css */ `/*  */
+.clipboard,
 pre {
   cursor: pointer;
   position: relative;
-  display: block;
 }
 .clipboard:hover::before,
 pre:hover::before {
   content: "Copy";
   position: absolute;
-  right: 1em;
+  right: 5%;
+  top: 5%;
+  background-color: #000c;
+  color: white;
+  padding: 0 0.5em;
 }
 .clipboard:active::before,
 pre:active::before {
   content: "Copied!";
-  /* filter: invert(); */
 }
 `;
 document.head.appendChild(styleSheet);
