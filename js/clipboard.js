@@ -1,56 +1,48 @@
 /*
 
-https://frank-gp.github.io/lib/js/clipboard.js
+    <!-- clipboard component... -->
+    <!-- <em class="clipboard">example</em> -->
+    <script src="https://frank-gp.github.io/lib/js/clipboard.js" defer></script>
+    <!-- clipboard component... -->
 
 */
 
-
 // ========== clipboard... ==========
 const _clipboard = document.querySelectorAll(".clipboard");
+const _pre = document.querySelectorAll("pre");
 
 _clipboard.forEach((item) => {
   item.addEventListener("click", () => {
     navigator.clipboard.writeText(item.textContent);
     console.log(item.textContent);
-    // alert(`Copy:
-    // ${item.textContent}`);
+  });
+});
+
+_pre.forEach((item) => {
+  item.addEventListener("click", () => {
+    navigator.clipboard.writeText(item.textContent);
+    console.log(item.textContent);
   });
 });
 // ========== clipboard. ==========
 
 const styleSheet = document.createElement("style");
-styleSheet.innerHTML = /* css */ `
+styleSheet.innerHTML = /* css */ `.clipboard,
 pre {
-  background-color: darkslateblue;
-  padding: 1em;
-  color: white;
-  overflow-x: auto;
-  max-width: 30rem;
-  margin: 0 auto;
-}
-.clipboard {
   cursor: pointer;
-  padding: 1em;
   position: relative;
-  border: 1px solid ;
+  display: block;
 }
-.clipboard:hover::before {
-  /* content: '\\f0ea'; */
-  /* content: '\\f24d';  */
-  content: 'Copy';
+.clipboard:hover::before,
+pre:hover::before {
+  content: "Copy";
   position: absolute;
   right: 1em;
-  font: 1em FontAwesome;
-  text-rendering: auto;
 }
-.clipboard:active::before {
-  content: 'Copied!';
-  background: darkslateblue;
-  color: white;
-  transform: scale(1.2);
-  padding: 4px;
-  border-radius: 5px;
-  border: 1px solid;
+.clipboard:active::before,
+pre:active::before {
+  content: "Copied!";
+  /* filter: invert(); */
 }
 `;
 document.head.appendChild(styleSheet);
