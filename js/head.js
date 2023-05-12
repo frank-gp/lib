@@ -3,8 +3,8 @@
 */
 
 document.head.innerHTML += /*html */ `<!-- Meta -->
-<link rel="icon" href="https://asset.fgp.one/file/fgp-favicon-256px.webp" sizes="256x256" />
-<meta property="og:image" content="https://asset.fgp.one/file/fgp-fb-cover.webp" />
+<link rel="icon" href="https://i0.wp.com/fgp.one/media/icon-128.webp" sizes="256x256" />
+<meta property="og:image" content="https://i0.wp.com/fgp.one/media/fgp-fb-cover.webp" />
 <meta property="og:image:width" content="600" />
 <meta property="og:image:height" content="314" />
 <!-- CSS files -->

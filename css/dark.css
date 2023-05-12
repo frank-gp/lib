@@ -1,0 +1,28 @@
+/*
+    <link rel="stylesheet" href="https://frank-gp.github.io/lib/css/dark.css" />
+*/
+
+* {
+  box-sizing: border-box;
+  font: inherit;
+  text-align: inherit;
+}
+html {
+  background-color: #223;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font: 100 2em Verdana;
+  text-align: center;
+}
+a {
+  color: cornflowerblue;
+}
+input {
+  outline: none;
+  padding: 0.3em;
+  color: #333;
+  border-radius: 1em;
+}

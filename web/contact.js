@@ -134,7 +134,7 @@ section_contact.insertAdjacentElement("beforebegin", style_contact);
 
 let contact_html = /* html */ `<h2>Contact Form</h2>
 <hr />
-<form action="https://asset.fgp.one/scripts/mail/contact-form.php" method="post">
+<form action="https://asset.fgp.one/mail/contact-form.php" method="post">
   <!-- <form action="send-email.php" method="post"> -->
   <section class="data">
     <aside>
