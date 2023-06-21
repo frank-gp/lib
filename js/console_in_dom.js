@@ -1,3 +1,13 @@
+/* 
+
+    <section id="consoleLog"></section>
+    <script src="https://frank-gp.github.io/lib/js/console_in_dom.js"></script>
+    <script>
+        console.log("console_in_dom");
+    </script>
+
+*/
+
 // Store a reference to the console.log function
 var originalConsoleLog = console.log;
 
@@ -18,6 +28,7 @@ console.log = function (message) {
   // Append the new paragraph element to the console log element
   consoleLogElement.appendChild(logMessageElement);
 };
+
 
 // // Usage example:
 // console.log("Hello, world!");
