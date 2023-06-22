@@ -1,6 +1,13 @@
-const createLoader = () => {
-  const loader = document.createElement("fgp-loader");
-  loader.innerHTML = /* html */ `
+
+/*
+
+https://frank-gp.github.io/lib/js/loader.js
+
+*/
+
+const fgp_loader = document.createElement("fgp-loader");
+
+fgp_loader.innerHTML = /* html */ `
     <style>
       fgp-loader {
         display: none;
@@ -46,22 +53,13 @@ const createLoader = () => {
         }
       }
     </style>
-    <div class="spinner"></div>
-    <h2 class="title">loader...</h2>
-  `;
-  return loader;
-};
 
-const appendLoaderToBody = (loader) => {
-  document.body.appendChild(loader);
-};
+      <div class="spinner"></div>
+      <h2 class="title">loader...</h2>
+`;
 
-const removeLoaderOnLoad = (loader) => {
-  window.addEventListener("load", () => {
-    loader.remove();
-  });
-};
+document.body.appendChild(fgp_loader);
 
-const fgpLoader = createLoader();
-appendLoaderToBody(fgpLoader);
-removeLoaderOnLoad(fgpLoader);
+window.addEventListener("load", () => {
+  fgp_loader.remove();
+});

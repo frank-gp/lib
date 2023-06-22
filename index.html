@@ -1,79 +1,94 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
-    <script src="https://frankgp.com/stats/send.js" type="module"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://fgp.one/favicon.webp" sizes="256x256" />
+    <meta name="theme-color" content="#347" />
+    <meta name="author" content="Frank GP" />
+    <meta name="site_locale" content="en_PE" />
 
-    <base href="https://frankgp.com/" />
-    <script src="script-head.js"></script>
-    <script src="script-defer.js" defer></script>
-    <!-- <script src="https://frank-gp.github.io/lib/social/youtube.js" data-youtube="https://youtu.be/1eIEGxlaOiE" defer></script> -->
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://frankgp.com/icon/icomoon/style.css" />
+    <link rel="stylesheet" href="https://frankgp.com/component/global.css" />
+
+    <!-- component -->
+    <script src="https://frankgp.com/component/header.js" type="module"></script>
+    <script src="https://frankgp.com/component/footer.js" type="module"></script>
+    <script src="https://frankgp.com/component/stat.js" type="module"></script>
+    <!-- <script src="https://frankgp.com/component/social.js" defer></script> -->
+    <!-- <script src="https://frankgp.com/component/contact.js" defer></script> -->
+
+    <!-- lib -->
+    <!-- <script src="https://frankgp.com/lib/js/clipboard.js" defer></script> -->
+    <!-- <script src="https://frankgp.com/lib/js/highlight.js"></script> -->
+    <!-- <script src="https://frankgp.com/lib/js/youtube-embed.js"></script> -->
+
+    <!-- SEO -->
+    <title>Frank GP — Android Developer</title>
+    <meta name="robots" content="index" />
+    <meta name="description" content="Research, design and development" />
+
+    <!-- Open Graph tags -->
+    <meta property="og:title" content="Frank GP — Android Developer" />
+    <meta property="og:description" content="Research, design and development" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://frankgp.com" />
+    <meta property="og:image" content="https://fgp.one/fb-cover.webp" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="314" />
+    <meta property="fb:app_id" content="1526445401046904" />
   </head>
+
   <body>
-    <script src="https://frankgp.com/lib/fgp/fgp_loader.js"></script>
-    <!-- <script src="https://fgp.one/clipboard.js" defer></script> -->
-    <!-- <script src="https://fgp.one/github.js" data-github="https://github.com/fgp555" defer></script> -->
-    <!-- <script src="/github.js" data-github="https://github.com/fgp555" defer></script> -->
-    <main>
-      <section class="meta">
-        <h1 class="title">Librerias</h1>
-        <p class="description">Diseño y desarrollo de paginas web.</p>
-      </section>
-      <section class="url">
-        <style>
-          .urls {
-            margin: auto;
-            display: inline-flex;
-            flex-direction: column;
-          }
-          a {
-            /* display: flex; */
-            margin: 0.5em;
-            color: cornflowerblue;
-            text-align: left;
-          }
-        </style>
-        <div class="urls"></div>
-        <script>
-          let url = {
-            1: "css/essential.css",
-            2: "js/clipboard.js",
-            3: "js/img-generator.js",
-            4: "js/ligthbox.js",
-            5: "js/loader.js",
-            6: "js/shortener.js",
-            7: "social/github.js",
-            8: "social/instagram.js",
-            9: "social/whatsapp.js",
-            10: "social/youtube.js",
-            11: "social/youtube_embed.js",
-            12: "web/illustrator.js",
-            13: "code/iframe",
-            14: "code/redirect",
-            15: "social/social.js",
-            16: "web/contact.js",
-            17: "js/mouse.js",
-            18: "json/martfury.json",
-            19: "js/highlight.js",
-            10: "js/console_in_dom.js",
-          };
+    <script src="https://frankgp.com/component/loader.js"></script>
 
-          let ObjectKeys = Object.keys(url);
-          for (let i = 0; i < ObjectKeys.length; i++) {
-            let urlKey = ObjectKeys[i];
-            console.log(url[urlKey]);
-            let a = document.createElement("a");
-            a.innerText = url[urlKey];
-            a.href = "https://frank-gp.github.io/lib/" + url[urlKey];
-            a.target = "_blank";
-            // document.body.appendChild(a);
-            document.querySelector(".urls").appendChild(a);
-          }
-        </script>
-      </section>
+    <main class="wp-content dark">
+      <h1>Web Library</h1>
+      <style>
+        .linkContainer {
+          max-width: 30rem;
+          margin: auto;
+          /* text-align: left; */
+          display: flex;
+          flex-direction: column;
+          gap: 0.5em;
+        }
+      </style>
+      <section class="linkContainer"></section>
+      <script>
+        // Assuming you have an array of links
+        const array = [
+          // CSS
+          "css/btn-bootstrap.css",
+          "css/btn.css",
+          "css/dark.css",
+          "css/essential.css",
+          // JS
+          "js/clipboard.js",
+          "js/console.js",
+          "js/highlight.js",
+          "js/img-generator.js",
+          "js/ligthbox.js",
+          "js/loader.js",
+          "js/mouse.js",
+          "js/share.js",
+          "js/shortener.js",
+          "js/sidebar.js",
+          "js/toggle.js",
+          "js/youtube-embed.js",
+        ];
+
+        let base_url = "https://frankgp.com/lib/";
+        array.forEach((item) => {
+          // Create the <a> element using template string
+          let url = base_url + item;
+          const anchor = `<a href="` + url + `">` + url + `</a>`;
+
+          // Append the <a> element to the container
+          document.querySelector(".linkContainer").insertAdjacentHTML("beforeend", anchor);
+        });
+      </script>
     </main>
-
-    <!-- mouse animation component... -->
-    <script src="https://frank-gp.github.io/lib/js/mouse.js" defer></script>
-    <!-- mouse animation component. -->
   </body>
 </html>

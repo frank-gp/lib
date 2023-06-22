@@ -2,7 +2,7 @@
 
     <!-- clipboard component... -->
     <!-- <em class="clipboard">example</em> -->
-    <script src="https://frank-gp.github.io/lib/js/clipboard.js" defer></script>
+    <script src="https://frankgp.com/lib/js/clipboard.js" defer></script>
     <!-- clipboard component... -->
 
 */
