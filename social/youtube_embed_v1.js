@@ -1,21 +1,27 @@
 /*
 
-    <!-- ========== youtube-embed component... ========== -->
-    <article class="youtube" data-url="https://youtu.be/1eIEGxlaOiE"></article>
-    <article class="youtube" data-url="https://youtu.be/DcTLSTbDXww"></article>
+    <!-- ========== youtube_embed component... ========== -->
+    <youtube_embed data-url="https://youtu.be/1eIEGxlaOiE"></youtube_embed>
+    <youtube_embed data-url="https://youtu.be/DcTLSTbDXww"></youtube_embed>
 
-    <script src="https://frank-gp.github.io/lib/social/youtube-embed.js"></script>
-    <!-- ========== youtube-embed component. ========== -->
+    <script src="https://frank-gp.github.io/lib/social/youtube_embed.js"></script>
+    <!-- ========== youtube_embed component. ========== -->
     
  */
+document.querySelector("youtube_embed").insertAdjacentHTML(
+  "afterend",
+  /*html*/ `
+<style>
+youtube_embed iframe[src*="youtube.com"] { width:100%; aspect-ratio:16/9; }
+</style>
+`
+);
 
+const youtube_embed_const = document.querySelectorAll("youtube_embed");
 
+youtube_embed_const.forEach(youtube_embed_func);
 
-const youtube = document.querySelectorAll(".youtube");
-
-youtube.forEach(youtube_embed);
-
-function youtube_embed(item, index) {
+function youtube_embed_func(item, index) {
   let youtubeID = item.dataset.url.split("https://youtu.be/")[1];
   // console.log(youtubeID);
   // console.log(index);
