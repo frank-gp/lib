@@ -1,7 +1,7 @@
 /*
 
     <!-- ========== highlight Component... ========== -->
-      <script src="https://frankgp.com/lib/js/highlight.js" type="module"></script>
+      <script src="https://frankgp.com/lib/highlight.js" type="module"></script>
     <!-- ========== highlight Component. ========== -->
     
  */

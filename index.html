@@ -20,9 +20,9 @@
     <!-- <script src="https://frankgp.com/component/contact.js" defer></script> -->
 
     <!-- lib -->
-    <!-- <script src="https://frankgp.com/lib/js/clipboard.js" defer></script> -->
-    <!-- <script src="https://frankgp.com/lib/js/highlight.js"></script> -->
-    <!-- <script src="https://frankgp.com/lib/js/youtube-embed.js"></script> -->
+    <!-- <script src="https://frankgp.com/lib/clipboard.js" defer></script> -->
+    <!-- <script src="https://frankgp.com/lib/highlight.js"></script> -->
+    <!-- <script src="https://frankgp.com/lib/youtube-embed.js"></script> -->
 
     <!-- SEO -->
     <title>Frank GP — Android Developer</title>
@@ -59,31 +59,38 @@
       <script>
         // Assuming you have an array of links
         const array = [
-          // CSS
-          "css/btn-bootstrap.css",
-          "css/btn.css",
-          "css/dark.css",
-          "css/essential.css",
-          // JS
-          "js/clipboard.js",
-          "js/console.js",
-          "js/highlight.js",
-          "js/img-generator.js",
-          "js/ligthbox.js",
-          "js/loader.js",
-          "js/mouse.js",
-          "js/share.js",
-          "js/shortener.js",
-          "js/sidebar.js",
-          "js/toggle.js",
-          "js/youtube-embed.js",
+          "btn-bootstrap.css",
+          "btn.css",
+          "dark.css",
+          "essential.css",
+          "form.css",
+          "clipboard.js",
+          "console.js",
+          "footer.js",
+          "github.js",
+          "header.js",
+          "highlight.js",
+          "img-generator.js",
+          "instagram.js",
+          "ligthbox.js",
+          "loader-backup.js",
+          "loader.js",
+          "mouse.js",
+          "share.js",
+          "shortener.js",
+          "sidebar.js",
+          "toggle.js",
+          "whatsapp.js",
+          "youtube-embed.js",
+          "youtube-embed_v1.js",
+          "youtube.js",
         ];
 
         let base_url = "https://frankgp.com/lib/";
         array.forEach((item) => {
           // Create the <a> element using template string
           let url = base_url + item;
-          const anchor = `<a href="` + url + `">` + url + `</a>`;
+          const anchor = `<a href="` + url + `" target="_blank">` + url + `</a>`;
 
           // Append the <a> element to the container
           document.querySelector(".linkContainer").insertAdjacentHTML("beforeend", anchor);

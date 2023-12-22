@@ -1,7 +1,7 @@
 /* 
 
     <section id="consoleLog"></section>
-    <script src="https://frankgp.com/lib/js/console.js" sync></script>
+    <script src="https://frankgp.com/lib/console.js" sync></script>
     <script>
         console.log("console_in_dom");
     </script>

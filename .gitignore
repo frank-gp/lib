@@ -13,4 +13,5 @@
 /.vscode
 /temp
 prepros.config
-dev.html
+*dev.*
+*backup*

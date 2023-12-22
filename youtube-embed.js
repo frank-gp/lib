@@ -4,7 +4,7 @@
     <youtube_embed data-url="https://youtu.be/oK3jROrz-CA"></youtube_embed>
     <youtube_embed data-url="https://youtu.be/5n-TKc4G7oU"></youtube_embed>
 
-    <script src="https://frankgp.com/lib/js/youtube-embed.js"></script>
+    <script src="https://frankgp.com/lib/youtube-embed.js"></script>
     <!-- ========== youtube_embed component. ========== -->
     
  */
